@@ -4,7 +4,7 @@ on: [push, workflow_dispatch]
 
 jobs:
 	build_artifacts:
-		runs_on: ubuntu-latest
+		runs-on: ubuntu-latest
 		steps:
 			- name: Build Artifact
 			  shell: bash
