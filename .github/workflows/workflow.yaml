@@ -3,16 +3,16 @@ name: Workflow
 on: [push, workflow_dispatch]
 
 jobs:
-	build_artifacts:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Build Artifact
-			  shell: bash
-			  run: |
-			    echo "artifact" > artifact.txt
-			- name: Upload Artifact
-			  uses: actions/upload-artifact@v4
-			  with:
-			    name: artifact
-			    path: artifact.txt
+  build_artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Artifact
+        shell: bash
+        run: |
+          echo "artifact" > artifact.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: artifact.txt
 
